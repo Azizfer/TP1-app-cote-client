@@ -1,0 +1,15 @@
+<section id="amis" aria-labelledby="friends-title">
+  <h2 id="friends-title">Liste des amis</h2>
+  <p>Modifiez un nom pour mettre à jour la liste.</p>
+  <ul class="friends-list">
+    @for (item of friendsList; track item) {
+      <li>
+        <label>
+          Nom de l'ami
+          <input type="text" [(ngModel)]="item.name">
+        </label>
+        <p>{{ item.name }} — {{ item.email }}</p>
+      </li>
+    }
+  </ul>
+</section>

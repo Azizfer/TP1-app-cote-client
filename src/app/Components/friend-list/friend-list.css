@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.friends-list {
+  list-style: none;
+  padding: 0;
+}
+
+.friends-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font: inherit;
+}

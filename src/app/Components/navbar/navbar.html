@@ -1,0 +1,10 @@
+<nav class="navbar" aria-label="Navigation principale">
+  <a href="#accueil"
+     [class.active]="activeSection === 'accueil'"
+     [attr.aria-current]="activeSection === 'accueil' ? 'location' : null"
+     (click)="activeSection = 'accueil'">Accueil</a>
+  <a href="#amis"
+     [class.active]="activeSection === 'amis'"
+     [attr.aria-current]="activeSection === 'amis' ? 'location' : null"
+     (click)="activeSection = 'amis'">Mes amis</a>
+</nav>

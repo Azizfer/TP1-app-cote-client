@@ -1,0 +1,22 @@
+<section id="notifications" aria-labelledby="notifications-title">
+  <h2 id="notifications-title">Notifications ({{ notificationsList.length }})</h2>
+  <button type="button" (click)="ShowNotifications()" [attr.aria-expanded]="show">
+    {{ show ? 'Masquer les notifications' : 'Afficher les notifications' }}
+  </button>
+
+  @if (show) {
+    <ul class="notifications-list" aria-live="polite">
+      @for (item of notificationsList; track item.id) {
+        <li>
+          <p>{{ item.message }}</p>
+          <button type="button" (click)="removeNotification(item.id)"
+                  [attr.aria-label]="'Supprimer la notification : ' + item.message">
+            Supprimer
+          </button>
+        </li>
+      } @empty {
+        <li class="empty">Aucune notification pour le moment.</li>
+      }
+    </ul>
+  }
+</section>
