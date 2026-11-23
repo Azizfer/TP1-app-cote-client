@@ -3,8 +3,20 @@
      [class.active]="activeSection === 'accueil'"
      [attr.aria-current]="activeSection === 'accueil' ? 'location' : null"
      (click)="activeSection = 'accueil'">Accueil</a>
+  <a href="#profil"
+     [class.active]="activeSection === 'profil'"
+     [attr.aria-current]="activeSection === 'profil' ? 'location' : null"
+     (click)="activeSection = 'profil'">Profil</a>
+  <a href="#conferences"
+     [class.active]="activeSection === 'conferences'"
+     [attr.aria-current]="activeSection === 'conferences' ? 'location' : null"
+     (click)="activeSection = 'conferences'">Conférences</a>
   <a href="#amis"
      [class.active]="activeSection === 'amis'"
      [attr.aria-current]="activeSection === 'amis' ? 'location' : null"
-     (click)="activeSection = 'amis'">Mes amis</a>
+     (click)="activeSection = 'amis'">Amis</a>
+  <a href="#notifications"
+     [class.active]="activeSection === 'notifications'"
+     [attr.aria-current]="activeSection === 'notifications' ? 'location' : null"
+     (click)="activeSection = 'notifications'">Notifications</a>
 </nav>

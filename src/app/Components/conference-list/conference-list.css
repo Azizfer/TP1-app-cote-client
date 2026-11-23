@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+h2, h3 {
+  color: #1a3a63;
+}
+
+.conferences-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.conferences-list li {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #d6e0ec;
+  border-radius: 8px;
+  background: #f7faff;
+  overflow-wrap: anywhere;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: #fff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-available {
+  background: #15803d;
+}
+
+.btn-low {
+  background: #b45309;
+}
+
+.btn-full {
+  background: #c62828;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #1a3a63;
+  outline-offset: 3px;
+}

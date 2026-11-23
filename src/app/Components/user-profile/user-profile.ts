@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-user-profile',
@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './user-profile.html',
   styleUrl: './user-profile.css'
 })
-export class UserProfile {}
+export class UserProfile {
+  name = signal('Aziz');
+  email = signal('aziz@example.com');
+}

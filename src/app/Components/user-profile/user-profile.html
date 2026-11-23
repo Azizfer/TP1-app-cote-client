@@ -1,1 +1,16 @@
-<p>user-profile works!</p>
+<section class="card" id="profil" aria-labelledby="profile-title">
+  <div class="icon" aria-hidden="true">👤</div>
+  <div class="profile-body">
+    <h2 id="profile-title">Profil utilisateur</h2>
+    <p><strong>Nom :</strong> {{ name() }}</p>
+    <p><strong>Email :</strong> {{ email() }}</p>
+
+    <label for="profile-name">Modifier le nom</label>
+    <input id="profile-name" type="text" autocomplete="name" #nameInput
+           [value]="name()" (input)="name.set(nameInput.value)">
+
+    <label for="profile-email">Modifier l'email</label>
+    <input id="profile-email" type="email" autocomplete="email" #emailInput
+           [value]="email()" (input)="email.set(emailInput.value)">
+  </div>
+</section>

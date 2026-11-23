@@ -1,0 +1,27 @@
+<section id="conferences" aria-labelledby="conferences-title">
+  <h2 id="conferences-title">Liste des conférences à venir</h2>
+  <ul class="conferences-list">
+    @for (conference of upcomingConferences; track conference.id) {
+      <li>
+        <h3>{{ conference.title | uppercase }}</h3>
+        <p>{{ conference.description }}</p>
+        <p><strong>Date :</strong> {{ conference.date | date:'dd/MM/yyyy' }}</p>
+        <p><strong>Lieu :</strong> {{ conference.place }}</p>
+        <p><strong>Participants :</strong> {{ conference.nbParticipants }} / {{ conference.maxParticipants }}</p>
+        <p><strong>Places restantes :</strong> {{ conference.maxParticipants - conference.nbParticipants }}</p>
+        <button type="button" class="btn"
+                [ngClass]="{
+                  'btn-available': conference.maxParticipants - conference.nbParticipants >= 10,
+                  'btn-low': conference.maxParticipants - conference.nbParticipants > 0 && conference.maxParticipants - conference.nbParticipants < 10,
+                  'btn-full': conference.nbParticipants >= conference.maxParticipants
+                }"
+                [disabled]="conference.nbParticipants >= conference.maxParticipants"
+                (click)="register(conference)">
+          S'inscrire
+        </button>
+      </li>
+    } @empty {
+      <li>Aucune conférence à venir pour le moment.</li>
+    }
+  </ul>
+</section>
